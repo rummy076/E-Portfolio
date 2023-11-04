@@ -14,21 +14,21 @@
     <nav>
       <div class="personal__logo">Sakib Hassan</div>
       <ul class="nav__link--list">
-        <li>
+        <li class="nav__link">
           <a href="" class="
               nav__link--anchor
               link__hover-effect
               link__hover-effect--black
             ">Languages</a>
         </li>
-        <li>
+        <li class="nav__link">
           <a href="" class="
               nav__link--anchor
               link__hover-effect
               link__hover-effect--black
             ">Projects</a>
         </li>
-        <li>
+        <li class="nav__link">
           <a href="" class="
               nav__link--anchor
               nav__link--anchor-primary
@@ -43,7 +43,7 @@
             <img src="./assets/pic1.jpg" class="about-me__picture" alt="Picture of Me !">
           </figure>
           <h1 class="about-me__info--title">
-            Hey! I'm <span class="text--purple">Sakib Hassan</span>👋
+            Hey! I'm <span class="text--purple">Sakib Hassan</span>&nbsp;<span class="wave">👋</span>
           </h1>
           <p class="about-me__info--para">
             I'm a <strong class="text--purple">Web Developer</strong> and <span class="text--purple">Designer</span>
@@ -213,7 +213,7 @@
   </section>
   <footer>
     <div class="row footer__row">
-      <a href="#">
+      <a href="#" class="footer__anchor">
         <figure class="footer__logo">
           <img src="data:image/jpeg;base64,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" class="footer__logo--img" alt="">
         </figure>
@@ -242,7 +242,7 @@
         footer__social--link
         link__hover-effect
         link__hover-effect--white
-        " target="_blank" download>Resume</a>
+        " target="_blank">Resume</a>
       </div>
       <div class="footer__copyright">Copyright © 2023 Sakib Hassan</div>
     </div>
