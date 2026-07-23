@@ -4,10 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sakib Hassan — Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Ambient Apple-Style Background Layer with Mouse Spotlight -->
+  <div class="bg-ambience" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+    <div class="cursor-spotlight" id="cursorSpotlight"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
   <!-- Translucent Apple Nav -->
   <nav class="nav">
@@ -164,33 +178,56 @@
 
       <div class="bento-grid grid-3">
         <div class="bento-card scroll-reveal">
-          <h3 class="skill-title">Languages</h3>
-          <p class="skill-list">Python, Java, SQL, C, JavaScript, HTML/CSS</p>
+          <h3 class="skill-title"><i class="fa-solid fa-code"></i> Languages</h3>
+          <p class="skill-list">Python (Advanced), Java (Advanced), SQL (Proficient), C (Proficient), JavaScript, HTML/CSS</p>
         </div>
         <div class="bento-card scroll-reveal">
-          <h3 class="skill-title">Frameworks & AI</h3>
+          <h3 class="skill-title"><i class="fa-solid fa-layer-group"></i> Frameworks & Tech</h3>
           <p class="skill-list">PyTorch, CUDA, TensorFlow, React, Streamlit, WebSockets, Postgres, DynamoDB</p>
         </div>
         <div class="bento-card scroll-reveal">
-          <h3 class="skill-title">Developer Tools</h3>
+          <h3 class="skill-title"><i class="fa-solid fa-wrench"></i> Developer Tools</h3>
           <p class="skill-list">Git, GitHub, Docker, AWS (EC2, Cognito), Unity, Google Colab, Anaconda, VS Code</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Designed with Apple minimalist principles. © 2026 Sakib Hassan.</p>
+      <p>© 2026 Sakib Hassan. Designed with Apple minimalist principles.</p>
     </div>
   </footer>
 
-  <!-- Apple Scroll-Reveal Script -->
+  <!-- Scripts: Scroll Reveal & Interactive Cursor Spotlight -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // --- 1. Mouse Spotlight Tracker ---
+      const spotlight = document.getElementById('cursorSpotlight');
+      let targetX = window.innerWidth / 2;
+      let targetY = window.innerHeight / 2;
+      let currentX = targetX;
+      let currentY = targetY;
+
+      window.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      });
+
+      // Smooth Lerp loop for fluid motion
+      function animateSpotlight() {
+        currentX += (targetX - currentX) * 0.15;
+        currentY += (targetY - currentY) * 0.15;
+        spotlight.style.transform = `translate(${currentX}px, ${currentY}px)`;
+        requestAnimationFrame(animateSpotlight);
+      }
+      animateSpotlight();
+
+      // --- 2. Apple Scroll-Reveal Observer ---
       const observerOptions = {
         root: null,
-        rootMargin: "0px 0px -50px 0px",
+        rootMargin: "0px 0px -60px 0px",
         threshold: 0.12
       };
 
@@ -198,7 +235,7 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("revealed");
-            observer.unobserve(entry.target); // Animate once
+            observer.unobserve(entry.target);
           }
         });
       }, observerOptions);
