@@ -3,167 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakib Hassan | Portfolio</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
+  <title>Sakib Hassan — Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="logo">SH<span>.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="assets/Sakib_Hassan_Resume.pdf" target="_blank" class="btn-sm">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-      </ul>
+  <!-- Translucent Apple Nav -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="#hero" class="nav-logo">Sakib Hassan</a>
+      <div class="nav-links">
+        <a href="#about">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="assets/Sakib_Hassan_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="hero-container">
-      <div class="hero-content">
-        <span class="badge">Computer Science & Mathematics</span>
-        <h1>Hi, I'm <span class="highlight">Sakib Hassan</span></h1>
-        <p class="subtitle">
-          Software Engineer & Machine Learning researcher specializing in Reinforcement Learning, AI-driven systems, and full-stack development.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="assets/Sakib_Hassan_Resume.pdf" download class="btn btn-outline">
-            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-          </a>
-        </div>
-        <div class="social-links">
-          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="mailto:contact@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+  <section id="hero" class="hero">
+    <div class="hero-wrapper">
+      <p class="hero-eyebrow">Computer Science & Mathematics</p>
+      <h1 class="hero-headline">Sakib Hassan.</h1>
+      <p class="hero-subheadline">
+        Building intelligent systems. Specializing in Reinforcement Learning, AI models, and real-time software.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Explore Work</a>
+        <a href="assets/Sakib_Hassan_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
       </div>
     </div>
   </section>
 
-  <!-- Education & Bio Section -->
+  <!-- Education Bento Grid -->
   <section id="about" class="section">
     <div class="container">
+      <p class="section-label">Background</p>
       <h2 class="section-title">Education</h2>
-      <div class="education-grid">
-        <div class="card edu-card">
-          <div class="card-header">
-            <h3>University at Buffalo</h3>
-            <span class="date">Jan. 2022 – May 2026</span>
-          </div>
-          <p class="degree">B.S. in Computer Science, Minor in Mathematics</p>
-          <p class="location"><i class="fa-solid fa-location-dot"></i> Buffalo, NY</p>
+      
+      <div class="bento-grid grid-2">
+        <div class="bento-card">
+          <span class="card-tag">Jan 2022 – May 2026</span>
+          <h3 class="card-title">University at Buffalo</h3>
+          <p class="card-subtitle">B.S. in Computer Science • Minor in Mathematics</p>
+          <p class="card-desc"><i class="fa-solid fa-location-dot"></i> Buffalo, NY</p>
         </div>
 
-        <div class="card edu-card">
-          <div class="card-header">
-            <h3>The Chinese University of Hong Kong (CUHK)</h3>
-            <span class="date">Aug. 2025 – Dec. 2025</span>
-          </div>
-          <p class="degree">Study Abroad Program</p>
-          <p class="location"><i class="fa-solid fa-location-dot"></i> Hong Kong</p>
+        <div class="bento-card">
+          <span class="card-tag">Aug 2025 – Dec 2025</span>
+          <h3 class="card-title">The Chinese University of Hong Kong</h3>
+          <p class="card-subtitle">Study Abroad Program (CUHK)</p>
+          <p class="card-desc"><i class="fa-solid fa-location-dot"></i> Hong Kong</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
+  <!-- Experience -->
   <section id="experience" class="section">
     <div class="container">
+      <p class="section-label">Career</p>
       <h2 class="section-title">Work Experience</h2>
-      <div class="timeline">
-        <div class="card timeline-item">
-          <div class="card-header">
-            <div>
-              <h3>Software Engineer Intern</h3>
-              <span class="company">University at Buffalo</span>
-            </div>
-            <span class="date">Jan. 2023 – May 2023</span>
+
+      <div class="bento-card featured-card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">Software Engineer Intern</h3>
+            <p class="card-subtitle">University at Buffalo</p>
           </div>
-          <ul class="bullet-list">
-            <li>Developed a React and WebSocket-based app for real-time 3D sensor data visualization with dynamic user interactions.</li>
-            <li>Integrated secure authentication with Amazon Cognito for enhanced security.</li>
-            <li>Designed a DynamoDB solution with Python for efficient data transformation and epoch-based queries.</li>
-            <li>Built a high-performance Python WebSocket server on EC2 for seamless IoT communication.</li>
-          </ul>
+          <span class="card-tag">Jan 2023 – May 2023</span>
         </div>
+        <ul class="apple-list">
+          <li>Engineered a React and WebSocket app for real-time 3D sensor data visualization and dynamic user interaction.</li>
+          <li>Integrated AWS Cognito for secure identity authentication.</li>
+          <li>Designed a DynamoDB architecture with Python for high-performance epoch-based queries.</li>
+          <li>Deployed a high-concurrency WebSocket server on AWS EC2 for low-latency IoT communication.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Featured Projects Bento Grid -->
   <section id="projects" class="section">
     <div class="container">
+      <p class="section-label">Innovation</p>
       <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
 
+      <div class="bento-grid grid-2">
+        
         <!-- Project 1 -->
-        <div class="card project-card">
-          <div class="project-tags">
+        <div class="bento-card">
+          <div class="tech-pills">
             <span>Python</span><span>PyTorch</span><span>Reinforcement Learning</span>
           </div>
-          <h3>Denoised RL for Optimal Trade Execution</h3>
-          <span class="project-date">Sep. 2025 – Dec. 2025</span>
-          <p>Developed AI-driven trade execution strategies using diffusion models and RL on minute-level QQQ market data.</p>
-          <ul class="bullet-list">
-            <li>Implemented a Diffusion-QL policy compared against PPO agents trained on historical/synthetic trajectories.</li>
-            <li>Built a market simulation incorporating market impact, liquidity constraints, and participation caps via Almgren-Chriss model.</li>
-            <li>Achieved consistent improvements over TWAP baseline execution across 486 trading windows.</li>
+          <h3 class="card-title">Denoised RL for Optimal Execution</h3>
+          <span class="project-date">Sep 2025 – Dec 2025</span>
+          <p class="card-desc">AI-driven trade execution strategies leveraging diffusion models on minute-level QQQ market data.</p>
+          <ul class="apple-list">
+            <li>Implemented Diffusion-QL policies against baseline PPO agents.</li>
+            <li>Simulated market impact & liquidity limits via Almgren-Chriss framework.</li>
+            <li>Outperformed TWAP baselines consistently across 486 trading windows.</li>
           </ul>
         </div>
 
         <!-- Project 2 -->
-        <div class="card project-card">
-          <div class="project-tags">
-            <span>Python</span><span>PyTorch</span><span>RL</span>
+        <div class="bento-card">
+          <div class="tech-pills">
+            <span>Python</span><span>PyTorch</span><span>PettingZoo</span>
           </div>
-          <h3>Multi-Agent RL in Adversarial Environment</h3>
-          <span class="project-date">Nov. 2024</span>
-          <p>Implemented Multi-Agent Deep Q-Network (DQN) policies in competitive settings via PettingZoo Simple Adversary.</p>
-          <ul class="bullet-list">
-            <li>Designed shared policy and replay buffer mechanisms for cooperative agents while training independent adversarial agents.</li>
-            <li>Modeled reward structures to evaluate strategic behavior in partially observable multi-agent settings.</li>
-            <li>Analyzed learning stability and performance over 2,000+ training episodes.</li>
+          <h3 class="card-title">Multi-Agent RL in Adversarial Settings</h3>
+          <span class="project-date">Nov 2024</span>
+          <p class="card-desc">Multi-Agent Deep Q-Network (DQN) implementation inside competitive simulated environments.</p>
+          <ul class="apple-list">
+            <li>Architected shared policy and replay mechanisms for cooperative agents.</li>
+            <li>Modeled adversarial reward structures in partially observable environments.</li>
+            <li>Evaluated stability across 2,000+ training episodes.</li>
           </ul>
         </div>
 
         <!-- Project 3 -->
-        <div class="card project-card">
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>LangChain</span>
+        <div class="bento-card">
+          <div class="tech-pills">
+            <span>LangChain</span><span>OpenAI</span><span>Streamlit</span>
           </div>
-          <h3>Semantic Search Chatbot</h3>
-          <span class="project-date">Sep. 2023</span>
-          <p>AI-powered text analysis tool handling PDFs and raw text using LangChain and OpenAI embeddings for semantic retrieval.</p>
-          <ul class="bullet-list">
-            <li>Enabled natural language queries for information extraction across unstructured documents.</li>
-            <li>Implemented document chunking, embedding pipelines, and vector similarity search.</li>
-            <li>Optimized retrieval quality through prompt tuning and query testing.</li>
+          <h3 class="card-title">Semantic Search Chatbot</h3>
+          <span class="project-date">Sep 2023</span>
+          <p class="card-desc">Semantic text analysis engine extracting insights from unstructured documents and PDFs.</p>
+          <ul class="apple-list">
+            <li>Built vector similarity search & document chunking pipelines.</li>
+            <li>Engineered prompt tuning methods to maximize response accuracy.</li>
           </ul>
         </div>
 
         <!-- Project 4 -->
-        <div class="card project-card">
-          <div class="project-tags">
+        <div class="bento-card">
+          <div class="tech-pills">
             <span>Unity</span><span>C#</span><span>HTML/CSS</span>
           </div>
-          <h3>UB Hacking 2022 Winner – Financial Game</h3>
-          <span class="project-date">Nov. 2022</span>
-          <p>Awarded <strong>Best Freshman Hack</strong> & <strong>M&T Tech Awards</strong> at UB Hacking 2022.</p>
-          <ul class="bullet-list">
-            <li>Built an educational financial literacy game using Unity.</li>
-            <li>Developed a supporting web presentation with custom HTML and CSS.</li>
+          <h3 class="card-title">UB Hacking Winner — Financial Game</h3>
+          <span class="project-date">Nov 2022</span>
+          <p class="card-desc">Awarded <strong>Best Freshman Hack</strong> & <strong>M&T Tech Awards</strong>.</p>
+          <ul class="apple-list">
+            <li>Developed an educational game teaching core financial literacy principles.</li>
+            <li>Built interactive web documentation and web portal.</li>
           </ul>
         </div>
 
@@ -171,30 +156,33 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Technical Specs Section -->
   <section id="skills" class="section">
     <div class="container">
+      <p class="section-label">Capabilities</p>
       <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="card skill-category">
-          <h3><i class="fa-solid fa-code"></i> Languages</h3>
-          <p>Python (Advanced), Java (Advanced), SQL (Proficient), C (Proficient), JavaScript, HTML/CSS</p>
+
+      <div class="bento-grid grid-3">
+        <div class="bento-card">
+          <h3 class="skill-title">Languages</h3>
+          <p class="skill-list">Python, Java, SQL, C, JavaScript, HTML/CSS</p>
         </div>
-        <div class="card skill-category">
-          <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Tech</h3>
-          <p>PyTorch, TensorFlow, CUDA, Postgres, Streamlit, React, WebSockets, DynamoDB, Amazon Cognito</p>
+        <div class="bento-card">
+          <h3 class="skill-title">Frameworks & AI</h3>
+          <p class="skill-list">PyTorch, CUDA, TensorFlow, React, Streamlit, WebSockets, Postgres, DynamoDB</p>
         </div>
-        <div class="card skill-category">
-          <h3><i class="fa-solid fa-wrench"></i> Developer Tools</h3>
-          <p>VS Code, Git, GitHub, Docker, Unity, Google Colab, Anaconda, IntelliJ, Emacs, Xpra</p>
+        <div class="bento-card">
+          <h3 class="skill-title">Developer Tools</h3>
+          <p class="skill-list">Git, GitHub, Docker, AWS (EC2, Cognito), Unity, Google Colab, Anaconda, VS Code</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 Sakib Hassan. All rights reserved.</p>
+    <div class="container">
+      <p>Designed with Apple minimalist principles. © 2026 Sakib Hassan.</p>
+    </div>
   </footer>
 
 </body>
