@@ -26,12 +26,12 @@
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-wrapper">
-      <p class="hero-eyebrow">Computer Science & Mathematics</p>
-      <h1 class="hero-headline">Sakib Hassan.</h1>
-      <p class="hero-subheadline">
+      <p class="hero-eyebrow hero-anim">Computer Science & Mathematics</p>
+      <h1 class="hero-headline hero-anim">Sakib Hassan.</h1>
+      <p class="hero-subheadline hero-anim">
         Building intelligent systems. Specializing in Reinforcement Learning, AI models, and real-time software.
       </p>
-      <div class="hero-actions">
+      <div class="hero-actions hero-anim">
         <a href="#projects" class="btn btn-primary">Explore Work</a>
         <a href="assets/Sakib_Hassan_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
       </div>
@@ -41,18 +41,18 @@
   <!-- Education Bento Grid -->
   <section id="about" class="section">
     <div class="container">
-      <p class="section-label">Background</p>
-      <h2 class="section-title">Education</h2>
+      <p class="section-label scroll-reveal">Background</p>
+      <h2 class="section-title scroll-reveal">Education</h2>
       
       <div class="bento-grid grid-2">
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <span class="card-tag">Jan 2022 – May 2026</span>
           <h3 class="card-title">University at Buffalo</h3>
           <p class="card-subtitle">B.S. in Computer Science • Minor in Mathematics</p>
           <p class="card-desc"><i class="fa-solid fa-location-dot"></i> Buffalo, NY</p>
         </div>
 
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <span class="card-tag">Aug 2025 – Dec 2025</span>
           <h3 class="card-title">The Chinese University of Hong Kong</h3>
           <p class="card-subtitle">Study Abroad Program (CUHK)</p>
@@ -65,10 +65,10 @@
   <!-- Experience -->
   <section id="experience" class="section">
     <div class="container">
-      <p class="section-label">Career</p>
-      <h2 class="section-title">Work Experience</h2>
+      <p class="section-label scroll-reveal">Career</p>
+      <h2 class="section-title scroll-reveal">Work Experience</h2>
 
-      <div class="bento-card featured-card">
+      <div class="bento-card featured-card scroll-reveal">
         <div class="card-header">
           <div>
             <h3 class="card-title">Software Engineer Intern</h3>
@@ -89,13 +89,13 @@
   <!-- Featured Projects Bento Grid -->
   <section id="projects" class="section">
     <div class="container">
-      <p class="section-label">Innovation</p>
-      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-label scroll-reveal">Innovation</p>
+      <h2 class="section-title scroll-reveal">Featured Projects</h2>
 
       <div class="bento-grid grid-2">
         
         <!-- Project 1 -->
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <div class="tech-pills">
             <span>Python</span><span>PyTorch</span><span>Reinforcement Learning</span>
           </div>
@@ -110,7 +110,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <div class="tech-pills">
             <span>Python</span><span>PyTorch</span><span>PettingZoo</span>
           </div>
@@ -125,7 +125,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <div class="tech-pills">
             <span>LangChain</span><span>OpenAI</span><span>Streamlit</span>
           </div>
@@ -139,7 +139,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <div class="tech-pills">
             <span>Unity</span><span>C#</span><span>HTML/CSS</span>
           </div>
@@ -159,19 +159,19 @@
   <!-- Technical Specs Section -->
   <section id="skills" class="section">
     <div class="container">
-      <p class="section-label">Capabilities</p>
-      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-label scroll-reveal">Capabilities</p>
+      <h2 class="section-title scroll-reveal">Technical Skills</h2>
 
       <div class="bento-grid grid-3">
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <h3 class="skill-title">Languages</h3>
           <p class="skill-list">Python, Java, SQL, C, JavaScript, HTML/CSS</p>
         </div>
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <h3 class="skill-title">Frameworks & AI</h3>
           <p class="skill-list">PyTorch, CUDA, TensorFlow, React, Streamlit, WebSockets, Postgres, DynamoDB</p>
         </div>
-        <div class="bento-card">
+        <div class="bento-card scroll-reveal">
           <h3 class="skill-title">Developer Tools</h3>
           <p class="skill-list">Git, GitHub, Docker, AWS (EC2, Cognito), Unity, Google Colab, Anaconda, VS Code</p>
         </div>
@@ -184,6 +184,30 @@
       <p>Designed with Apple minimalist principles. © 2026 Sakib Hassan.</p>
     </div>
   </footer>
+
+  <!-- Apple Scroll-Reveal Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0.12
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target); // Animate once
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".scroll-reveal").forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 
 </body>
 </html>
